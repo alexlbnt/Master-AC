@@ -1,0 +1,32 @@
+.clientes-page {
+  background: white;
+  color: #000000;
+  padding: 4rem 2rem;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    color: #386C54;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    .card {
+      background-color: #f2f2f2;
+      padding: 1.5rem;
+      border-radius: 8px;
+      min-width: 200px;
+      font-weight: bold;
+    }
+  }
+}

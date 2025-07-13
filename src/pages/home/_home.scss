@@ -1,0 +1,240 @@
+.home {
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+
+  section {
+    padding: 4rem 2rem;
+  }
+
+  .hero {
+    background: url("/public/hero.jpg") no-repeat center/cover;
+    height: 100vh;
+    position: relative;
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .logo-container {
+        text-align: center;
+
+        h1 {
+          font-size: 5rem;
+          span {
+            color: #386C54;
+            font-weight: bold;
+            display: block;
+          }
+          small {
+            font-size: 1rem;
+            color: #fff;
+            margin-top: 0.5rem;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .perfil {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    .perfil-text {
+      flex: 1;
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        margin-bottom: 1.5rem;
+        color: #ccc;
+      }
+
+      button {
+        background: #386C54;
+        padding: 0.6rem 1.6rem;
+        border: none;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: #4fa36c;
+        }
+      }
+    }
+
+    .perfil-img {
+      flex: 1;
+      min-height: 280px;
+      background: url("/public/perfil.jpg") no-repeat center/cover;
+      border-radius: 10px;
+    }
+  }
+
+  .servicos {
+    background-color: #000;
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #ffffff;
+    }
+
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .servico-card {
+      background: #111;
+      border: 1px solid #1f1f1f;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: left;
+      transition: 0.3s;
+      box-shadow: 0 0 0 transparent;
+
+      &:hover {
+        box-shadow: 0 0 20px rgba(72, 186, 125, 0.15);
+        transform: translateY(-4px);
+      }
+
+      span {
+        font-size: 1.2rem;
+        color: #4fa36c;
+        font-weight: bold;
+      }
+
+      h3 {
+        margin-top: 0.5rem;
+        font-size: 1.4rem;
+        color: #ffffff;
+      }
+
+      p {
+        color: #ccc;
+        margin-top: 0.5rem;
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+    }
+
+    .botao-servico {
+      background: #386c54;
+      color: #fff;
+      padding: 0.7rem 2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #4fa36c;
+      }
+    }
+  }
+
+  .clientes {
+    background: #fff;
+    color: #000;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #333;
+      margin-bottom: 2rem;
+    }
+
+    .clientes-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+
+      .card {
+        background: #f5f5f5;
+        padding: 1rem 2rem;
+        border-radius: 6px;
+        font-weight: bold;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    button {
+      margin-top: 2rem;
+      background: #386C54;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #4fa36c;
+      }
+    }
+  }
+
+  .frase {
+    background-color: #000000;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    padding: 3rem 2rem;
+    line-height: 1.6;
+  }
+
+  .contato {
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .contato-info {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+
+      .contato-img {
+        background: url("/public/contato.jpg") no-repeat center/cover;
+        width: 320px;
+        height: 220px;
+        border-radius: 10px;
+      }
+
+      .contato-dados {
+        max-width: 300px;
+
+        p {
+          margin-bottom: 1.2rem;
+
+          strong {
+            color: #386C54;
+          }
+        }
+      }
+    }
+  }
+}
