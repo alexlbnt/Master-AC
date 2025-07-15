@@ -108,9 +108,10 @@ export default function Home() {
         </p>
         <div className="clientes-cards">
           {[
-            { nome: "Guarani - GO", imagem: "/cidades/guarani.jpg" },
-            { nome: "Iaciara - GO", imagem: "/cidades/iaciara.jpg" },
-            { nome: "São Domingos - GO", imagem: "/cidades/saodomingos.jpg" },
+            { nome: "Prefeitura de Guarani -GO", imagem: "/cidades/guarani.jpg" },
+            { nome: "Prefeitura de Iaciara -GO", imagem: "/cidades/iaciara.jpg" },
+            { nome: "Câmara de São Domingos -GO", imagem: "/cidades/saodomingos.jpg" },
+            { nome: "Câmara de Faina -GO", imagem: "/cidades/faina.jpg" },
           ].map((cidade, index) => (
             <div className="card" key={index}>
               <img src={cidade.imagem} alt={cidade.nome} className="card-img" />

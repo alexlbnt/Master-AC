@@ -113,7 +113,45 @@
         padding: 1rem 1.5rem;
         border-left: 4px solid #4fa36c;
         border-radius: 6px;
-        color: #ccc;
+        color: #fff;
+      }
+    }
+  }
+
+  .contato-preview {
+    background: linear-gradient(to right, #000000, #000000);
+    color: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+
+      h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .botao-contato {
+        background-color: #386c54;
+        color: #fff;
+        padding: 0.8rem 2rem;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background-color: #4fa36c;
+          color: #fff;
+        }
       }
     }
   }

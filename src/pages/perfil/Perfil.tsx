@@ -1,6 +1,8 @@
 import React from "react";
 import "./_perfil.scss";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 
 export default function Perfil() {
   return (
@@ -101,6 +103,26 @@ export default function Perfil() {
           <li>✔ Relatórios claros e acessíveis para gestores e população</li>
         </ul>
       </section>
+
+            {/* ENTRE EM CONTATO */}
+      <section className="contato-preview">
+        <motion.div
+          className="container"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2>Fale com a nossa equipe</h2>
+          <p>
+            Precisa de suporte ou quer saber mais sobre nossos serviços?
+            Estamos prontos para te ajudar.
+          </p>
+          <Link to="/contato" className="botao-contato">
+            Entrar em Contato
+          </Link>
+        </motion.div>
+      </section>
+
     </main>
   );
 }
