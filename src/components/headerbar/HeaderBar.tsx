@@ -15,7 +15,6 @@ export default function HeaderBar() {
       <nav>
         <Link to="/" className={pathname === "/" ? "active" : ""}>Início</Link>
         <Link to="/perfil" className={pathname === "/perfil" ? "active" : ""}>Perfil</Link>
-        <Link to="/clientes" className={pathname === "/clientes" ? "active" : ""}>Clientes</Link>
         <Link to="/contato" className={pathname === "/contato" ? "active" : ""}>Contato</Link>
       </nav>
     </header>

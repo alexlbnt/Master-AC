@@ -1,6 +1,7 @@
 import React from "react";
 import "./_home.scss";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; 
 
 export default function Home() {
   return (
@@ -37,7 +38,15 @@ export default function Home() {
             excelência na assessoria contábil para prefeitos, garantindo conformidade legal,
             eficiência nos gastos e segurança nos processos administrativos.
           </p>
-          <button>Saiba mais &gt;</button>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link to="/perfil" className="botao-servico">
+              Saiba mais &gt;
+            </Link>
+          </motion.div>
         </div>
         <motion.div
           className="perfil-img"
@@ -60,20 +69,20 @@ export default function Home() {
         <div className="servicos-grid">
           {[
             {
-              titulo: "Preparação Fiscal",
-              desc: "Preparamos tudo o que você precisa para o imposto de renda.",
+              titulo: "Regularidade Contábil e Fiscal",
+              desc: "Executamos a contabilidade do município conforme as normas do setor público, garantindo transparência, legalidade e cumprimento da Lei de Responsabilidade Fiscal.",
             },
             {
-              titulo: "Pacote de Startup",
-              desc: "Criamos modelos financeiros que você pode apresentar a investidores.",
+              titulo: "Gestão Orçamentária e Financeira",
+              desc: "Auxiliamos na elaboração e acompanhamento do PPA, LDO e LOA, orientando a prefeitura na aplicação correta dos recursos.",
             },
             {
-              titulo: "Gestão Patrimonial",
-              desc: "Serviços inteligentes de consultoria em investimentos.",
+              titulo: "Prestação de Contas e Relatórios",
+              desc: "Enviamos todas as obrigações legais aos Tribunais de Contas, como balancetes, demonstrativos e sistemas (SIOPE, SIOPS, SICONFI).",
             },
             {
-              titulo: "Consultoria Fiscal",
-              desc: "Especialistas nas obrigações fiscais e tributárias.",
+              titulo: "Apoio Administrativo",
+              desc: "Oferecemos suporte técnico à licitações, contratos e capacitação aos servidores para melhorar a eficiência da administração municipal.",
             },
           ].map((servico, index) => (
             <motion.div
@@ -89,14 +98,6 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="botao-servico"
-        >
-          Saiba mais &gt;
-        </motion.button>
       </section>
 
       {/* CLIENTES */}
@@ -106,11 +107,17 @@ export default function Home() {
           Cultivamos a confiança de nossos clientes por meio de um trabalho sério e comprometido.
         </p>
         <div className="clientes-cards">
-          <div className="card">Guarani - GO</div>
-          <div className="card">Iaciara - GO</div>
-          <div className="card">São Domingos - GO</div>
+          {[
+            { nome: "Guarani - GO", imagem: "/cidades/guarani.jpg" },
+            { nome: "Iaciara - GO", imagem: "/cidades/iaciara.jpg" },
+            { nome: "São Domingos - GO", imagem: "/cidades/saodomingos.jpg" },
+          ].map((cidade, index) => (
+            <div className="card" key={index}>
+              <img src={cidade.imagem} alt={cidade.nome} className="card-img" />
+              <p>{cidade.nome}</p>
+            </div>
+          ))}
         </div>
-        <button>Saiba mais &gt;</button>
       </section>
 
       {/* FRASE */}
@@ -129,7 +136,7 @@ export default function Home() {
           <div className="contato-dados">
             <p>
               <strong>Endereço:</strong> <br />
-              Av. T-63, nº 1504, Ed. Aquarius Center  <br />
+              Av. T-63, nº 1504, Ed. Aquarius Center <br />
               St. Bueno <br />
               Goiânia - GO
             </p>
@@ -140,6 +147,7 @@ export default function Home() {
             <p>
               <strong>Email:</strong> <br />
               alexljr@hotmail.com
+              <br />
               fernando@hotmail.com
             </p>
           </div>
