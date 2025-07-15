@@ -68,7 +68,7 @@ export default function Perfil() {
             },
             {
               titulo: "Valores",
-              desc: "Ética, comprometimento, transparência, inovação e foco em resultados sustentáveis.",
+              desc: "Ética, comprometimento, transparência, inovação e foco em resultados.",
             },
           ].map((item, index) => (
             <motion.div
